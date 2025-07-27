@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 
 public class Main {
 
@@ -6,13 +7,14 @@ public class Main {
 		venilton.setNome("Venilton");
 		
 		Conta cc = new ContaCorrente(venilton);
-		Conta poupanca = new ContaPoupanca(venilton);
+		ContaPoupanca poupanca = new ContaPoupanca(venilton);
 
 		cc.depositar(100);
 		cc.transferir(100, poupanca);
 		
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
+
 	}
 
 }
